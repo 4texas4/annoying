@@ -1,0 +1,52 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* To prevent scrollbars from appearing if the windows move */
+}
+
+.container {
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: #FF6347;
+  font-size: 2.5em; /* Slightly larger text for emphasis */
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #FF6347;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+}
+
+button:hover {
+  background-color: #FF4500;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.instructions {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+h1, p {
+  font-family: 'Arial', sans-serif;
+}
+
