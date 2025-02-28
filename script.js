@@ -79,7 +79,7 @@ function createAnnoyingWindow() {
 
     // Move the window to the new position, updating by velocity
     newWindow.moveTo(posX, posY);
-  }, 50); // Every 50ms to create smooth motion
+  }, 1); // Every 1ms to create smooth motion
 
   // Countdown from 10 to 1
   let countdown = 10;
