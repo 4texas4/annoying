@@ -1,12 +1,26 @@
 // Function to create the window that follows the mouse
 function createMouseFollowingWindow() {
-  // Create a new window with the updated dimensions (200x200)
+  // Create a new window with the updated dimensions (555x270)
   const windowName = 'mouseWindow_' + Math.random(); // Ensure unique name
-  const mouseWindow = window.open('', windowName, 'width=200,height=200');
+  const mouseWindow = window.open('', windowName, 'width=555,height=270');
   
-  // Add content to the window
-  mouseWindow.document.write('<h1>I\'m following your mouse!</h1>');
+  // Add the initial message to the window
+  mouseWindow.document.write('<h1>I have currently hacked your computer.</h1>');
+  mouseWindow.document.write('<p>Your information is now compromised. Power off this computer before your files are sent to Telegram in 10 seconds.</p>');
 
+  // Countdown from 10 to 1
+  let countdown = 10;
+  const countdownInterval = setInterval(() => {
+    if (countdown > 0) {
+      mouseWindow.document.body.innerHTML = `<h1>I have currently hacked your computer.</h1><p>Your information is now compromised. Power off this computer before your files are sent to Telegram in <strong>${countdown}</strong> seconds.</p>`;
+      countdown--; // Decrement the countdown
+    } else {
+      // When countdown finishes, display the final message
+      mouseWindow.document.body.innerHTML = '<h1>Your files have now been sent to Telegram :3</h1>';
+      clearInterval(countdownInterval); // Stop the countdown interval
+    }
+  }, 1000); // Update every 1 second
+  
   // Function to update the position of the mouse-following window based on mouse movement
   document.addEventListener('mousemove', (event) => {
     const mouseX = event.clientX;
